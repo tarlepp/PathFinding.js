@@ -118,9 +118,11 @@ Grid.prototype.isInside = function(x, y) {
  * @param {number} x - The x coordinate of the node.
  * @param {number} y - The y coordinate of the node.
  * @param {boolean} walkable - Whether the position is walkable.
+ * @param {number} [cost] - Cost value of the node.
  */
-Grid.prototype.setWalkableAt = function(x, y, walkable) {
+Grid.prototype.setWalkableAt = function(x, y, walkable, cost) {
     this.nodes[y][x].walkable = walkable;
+    this.nodes[y][x].cost = cost || 1
 };
 
 
